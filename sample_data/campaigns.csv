@@ -1,0 +1,6 @@
+campaign_id,campaign_name,start_date,end_date,channel,budget,orders,revenue,impressions,clicks
+CMP001,NewYearPromo,2024-01-01,2024-01-07,Omni,5000.00,85,12500.00,150000,8500
+CMP002,ElectronicsSale,2024-01-08,2024-01-14,Online,3000.00,62,9800.00,100000,6200
+CMP003,OfficeClearance,2024-01-15,2024-01-21,Offline,2000.00,48,6500.00,80000,4000
+CMP004,MemberDay,2024-01-22,2024-01-28,Online,4000.00,75,11200.00,120000,7500
+CMP005,SpringPreSale,2024-01-25,2024-01-31,Omni,6000.00,95,15800.00,180000,10500

@@ -44,9 +44,20 @@ class SalesSummary:
     n_customers: int = 0
     growth_first_to_last_month: Optional[float] = None     # %
 
+    _INT_FIELDS = ("n_records", "total_orders", "n_customers")
+
     def to_dict(self) -> dict:
-        return {k: (float(v) if isinstance(v, (int, float, np.floating)) else v)
-                for k, v in self.__dict__.items()}
+        out = {}
+        for k, v in self.__dict__.items():
+            if k in self._INT_FIELDS and v is not None:
+                out[k] = int(v)
+            elif isinstance(v, (np.floating, float)):
+                out[k] = float(v)
+            elif isinstance(v, (np.integer,)):
+                out[k] = int(v)
+            else:
+                out[k] = v
+        return out
 
 
 @dataclass
