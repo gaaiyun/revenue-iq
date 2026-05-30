@@ -1,10 +1,15 @@
-streamlit==1.32.0
-pandas==2.2.0
-numpy==1.26.4
-plotly==5.19.0
-scikit-learn==1.4.0
-openpyxl==3.1.2
-xlsxwriter==3.1.9
-reportlab==4.0.9
-pytest==8.0.0
-pytest-cov==4.1.0
+# 核心：CLI 全部子命令只需要这三个
+pandas>=2.0
+numpy>=1.24
+pytest>=8.0
+
+# 可选：v1 Streamlit 交互式仪表板（dashboard.py / sales_analyzer.py / forecast.py）
+streamlit>=1.32
+plotly>=5.19
+scikit-learn>=1.4
+statsmodels>=0.14
+openpyxl>=3.1
+
+# 可选：commentary 接真实 LLM 时再装（缺则走规则模板）
+# openai
+# anthropic
